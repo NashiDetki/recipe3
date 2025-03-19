@@ -1,0 +1,172 @@
+@font-face {
+    font-family: Pasifico;
+    src: url(./fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(./fonts/Ubuntu-Light.woff2);
+}
+
+@font-face {
+    font-family: badscript;
+    src: url(./fonts/BadScript-Regular.ttf);
+}
+
+.mane{
+    min-width: 320px;
+    max-width: 960px;
+    background-color: #4b2e28;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.title{
+    margin: 0;
+    margin-top: 40px;
+    font-size: 56px;
+    line-height: 100px;
+    color:#dad9d9;
+    text-decoration: underline;
+    font-family: Pasifico;
+ 
+}
+@media screen and (max-width:700px){
+    .title{
+        font-size: 25px;
+        margin-top: 5px;
+    }
+}
+.description{
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    width: 80%;
+    font-weight: 100px;
+    text-align: center;
+    color: #dad9d9;
+    font-family: Ubuntu;
+}
+
+.cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px #cda261;
+    margin: 20px;
+    background-size: cover;
+    transition: transform 0.2 linear 1.1;
+
+
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+.card_title{
+    color: #ce9a69;
+    text-align: center;
+    margin: 0;
+    margin-top: 40px;
+    font-size: 25px;
+    font-family: badscript;
+}
+.card_item_1{
+    background-image: url(./img/кекс.jpg);
+    background-size: -35px;
+}
+.card_item_2{
+    background-image: url(./img/печенье.jpg);
+    background-size: -35px;
+}
+.card_item_3{
+    background-image: url(./img/трюфель.jpg);
+    background-size: -35px;
+}
+
+.popup{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility:hidden;
+    opacity: 0;
+
+}
+.popup__contener{
+    display: flex;
+    flex-direction:  column;
+    width: 520px;
+    height: 270px;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+
+
+}
+@media screen and (max-width: 865px) {
+    .popup__contener{
+        width: 270px;
+        height: 450px;
+    }
+}
+
+
+.popup__button{
+    background-image: url(./img/CloseButoon.svg);
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -32px;
+    right: -32px;    
+}
+@media screen and (max-width: 400px) {
+    .popup__button{
+        right: 0px;
+    }
+    
+}
+
+.popup__button:hover{
+    cursor: pointer;
+}
+
+.popup__title{
+    text-align: center;
+    font-family: badscript;
+    margin: 0;
+    margin-bottom: 20px;
+
+}
+.popup__text{
+    font-family: Ubuntu;
+    font-weight: 100;
+    text-align: center;
+    
+}
+.popup__opened{
+    visibility: visible;
+    opacity: 1;
+}
